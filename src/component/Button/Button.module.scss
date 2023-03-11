@@ -1,0 +1,74 @@
+.wrapper {
+    min-width: 100px;
+    min-height: 36px;
+    line-height: 22px;
+    font-weight: 700;
+    font-size: 1.6rem;
+    border-radius: 4px;
+    padding: 6px 8px;
+    border: 1px solid transparent;
+    background-color: var(--while);
+    
+    &:hover {
+        cursor: pointer;
+    }
+    
+    + .wrapper {
+        margin-left: 8px;
+    }
+}
+
+.icon + .title, .title + .icon {
+    margin-left: 8px;
+}
+
+//Button type
+.rounded {
+    border-radius: 999px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
+    border-color: rgba(22, 24, 35, 0.12);
+
+    &:hover {
+        border-color: rgba(22, 24, 35, 0.2);
+        background-color: rgba(22, 24, 35, 0.3);
+    }
+}
+
+.primary {
+    color: var(--while);
+    background-color: var(--primary);
+
+    &:hover {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),#FE2C55;
+    }
+}
+
+.outLine {
+    color: var(--primary);
+    border-color: currentColor;
+    background-color: var(--while);
+
+    &:hover {
+        border-color: currentColor;
+        background-color: rgba(254, 44, 85, 0.06);
+    }
+}
+
+.text {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+//Button size
+.small {
+    min-width: 88px;
+    min-height: 28px;
+    padding: 0px 10px;
+}
+
+.large {
+    width: 100%;
+    min-width: 168px;
+    min-height: 48px;
+    font-size: 1.8rem;
+}
