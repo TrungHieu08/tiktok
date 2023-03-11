@@ -1,7 +1,7 @@
 //layout
-import { HeaderOnly } from '../component/Layout';
+import { HeaderOnly } from '~/component/Layout';
 //page
-import { Home, Following, Upload } from '../pages';
+import { Home, Following, Upload } from '~/pages';
 
 //Public
 const publicRoutes = [

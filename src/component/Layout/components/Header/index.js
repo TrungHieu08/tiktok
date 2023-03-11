@@ -1,13 +1,14 @@
-import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark, faSpinner, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { useEffect, useState } from 'react';
+import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react/headless';
 import styles from './Header.module.scss';
-import images from '../../../../assets/images';
-import { useEffect, useState } from 'react';
-import { Wrapper as PopperWrapper } from '../../../Popper';
-import AccountsItem from '../../../AccountsItem/AccountsItem';
-import Button from '../../../Button';
+
+import images from '~/assets/images';
+import { Wrapper as PopperWrapper } from '~/component/Popper';
+import { AccountsItem } from '~/component/AccountsItem';
+import Button from '~/component/Button';
 
 const cx = classNames.bind(styles);
 
