@@ -1,5 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faSpinner, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCircleXmark,
+  faSpinner,
+  faMagnifyingGlass,
+  faEarthAsia,
+  faKeyboard,
+  faCircleQuestion,
+  faEllipsisVertical,
+} from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react/headless';
@@ -9,11 +17,28 @@ import images from '~/assets/images';
 import { Wrapper as PopperWrapper } from '~/component/Popper';
 import { AccountsItem } from '~/component/AccountsItem';
 import Button from '~/component/Button';
+import Menu from '~/component/Popper/Menu';
 
 const cx = classNames.bind(styles);
 
 function Header() {
   const [searchResult, setSearchResult] = useState([]);
+
+  const MENU_ITEMS = [
+    {
+      icon: <FontAwesomeIcon icon={faEarthAsia} />,
+      title: 'English',
+    },
+    {
+      icon: <FontAwesomeIcon icon={faCircleQuestion} />,
+      title: 'Feedback and help',
+      to: '/feedback',
+    },
+    {
+      icon: <FontAwesomeIcon icon={faKeyboard} />,
+      title: 'Keyboard shortcuts',
+    },
+  ];
 
   useEffect(() => {
     setTimeout(() => {
@@ -54,6 +79,11 @@ function Header() {
         <div className={cx('actions')}>
           <Button text>Update</Button>
           <Button primary>Login</Button>
+          <Menu items={MENU_ITEMS}>
+            <button className={cx('more-btn')}>
+              <FontAwesomeIcon className={cx('icon-btn')} icon={faEllipsisVertical} />
+            </button>
+          </Menu>
         </div>
       </div>
     </header>
