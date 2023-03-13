@@ -13,6 +13,7 @@
 
 .inner {
     height: 100%;
+    padding: 0 var(--default-layout-horizontal-space);
     width: var(--default-layout-width);
     display: flex;
     align-items: center;
