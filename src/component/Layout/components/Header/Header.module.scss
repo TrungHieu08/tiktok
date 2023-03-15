@@ -98,6 +98,11 @@
         background-color: rgba(22, 24, 35, .03);;
     }
 }
+//Actions
+.actions {
+    display: flex;
+    align-items: center;
+}
 
 .more-btn {
     background-color: transparent;
@@ -109,4 +114,21 @@
     height: 20px;
     font-size: 1.8rem;
     padding: 0 4px;
+}
+
+.action-btn {
+    font-size: 2.2rem;
+    color: #161823;
+    background-color: transparent;
+    padding: 4px 6px;
+    cursor: pointer;
+}
+
+.curren-avatar {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 12px;
+    cursor: pointer;
 }

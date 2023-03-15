@@ -17,6 +17,10 @@
     padding: 9px 8px;
     cursor: pointer;
     
+    &.separate {
+        border-top: 1px solid rgba(22, 24, 35, 0.12);
+    }
+
     &:hover {
         background: rgba(22, 24, 35, 0.03);
     }

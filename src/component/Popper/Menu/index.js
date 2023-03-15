@@ -26,7 +26,7 @@ function Menu({ children, items = [], onChange = defaultFunc }) {
             if (isParen) {
               setHistory((prev) => [...prev, item.children]);
             } else {
-              console.log(item);
+              onChange();
             }
           }}
         />
@@ -49,6 +49,7 @@ function Menu({ children, items = [], onChange = defaultFunc }) {
           </PopperWrapper>
         </div>
       )}
+      onHide={() => setHistory((prev) => prev.slice(0, 1))}
     >
       {children}
     </Tippy>
