@@ -1,5 +1,5 @@
-function Profile() {
-  return <h1>Profile page</h1>;
+function Live() {
+  return <h1>Live page</h1>;
 }
 
-export default Profile;
+export default Live;
